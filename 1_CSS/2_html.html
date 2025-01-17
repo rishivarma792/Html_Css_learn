@@ -1,0 +1,61 @@
+<!-- 
+->CSS COMBINATORS :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc</title>
+    
+    <style>
+     
+     /* decendent space : all the elements  */
+     header p {
+    background-color: black;
+    color: white;
+     }
+     header > p {
+         background-color: brown;
+         color: white;
+        }
+
+        /* next sibilining   */
+         div p + a {
+            background-color: aqua;
+         }
+
+         /*subsequent sibiling   */
+
+         div p ~ p {
+            background-color: beige;
+         }
+
+     
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <p> (under head -> first child)Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima pariatur nobis minus optio alias quo asperiores, iste facere repudiandae facilis, commodi ullam totam iure est doloremque magnam fugiat neque.</p>
+        <p> (unbder header -> second child child)Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima pariatur nobis minus optio alias quo asperiores, iste facere repudiandae facilis, commodi ullam totam iure est doloremque magnam fugiat neque.</p>
+        <div>
+            <p> (under header and under div not direct child of header so space dont work -> 1st child of div of header )Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima pariatur nobis minus optio alias quo asperiores, iste facere repudiandae facilis, commodi ullam totam iure est doloremque magnam fugiat neque.</p>
+        </div>
+
+    </header>
+
+    <div>
+        <p> (unbder div -> first child)Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima pariatur nobis minus optio alias quo asperiores, iste facere repudiandae facilis, commodi ullam totam iure est doloremque magnam fugiat neque.</p>
+        <a href="/">sdfsdaf</a>
+        <a href="/">sdfsees</a>
+        <p> (unbder div -> second child child)Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima pariatur nobis minus optio alias quo asperiores, iste facere repudiandae facilis, commodi ullam totam iure est doloremque magnam fugiat neque.</p>
+        <p> (unbder div -> third child )Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima pariatur nobis minus optio alias quo asperiores, iste facere repudiandae facilis, commodi ullam totam iure est doloremque magnam fugiat neque.</p>
+        
+    </div>
+
+    
+</body>
+</html>

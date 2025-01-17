@@ -1,0 +1,53 @@
+<!-- 
+ ->CSS ATTRBUTES SELECTOR 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* using sttribute  */
+       a[target] { 
+           color: red;
+        }
+        a[target="_top"]
+        {
+           color: blue;   
+        }
+        /* | -> see exact word  */
+        a[href|="http://instagram.com"]
+        {
+           color: black;   
+        }
+        
+        /* ^ -> start with 
+           $ ->end with
+           * -> anywhere this value is present
+        */
+         
+        /* using attri value  */
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <a href="http://google.com" target="_top">gogol
+        </a>
+        <br>
+        <a href="http://facebook.com" target="_blank">facebook
+        </a>  
+        <br>
+        <a href="http://yahoo.com" target="_parent">yahoo</a>  
+        <br>
+
+        <a href="http://youtube.com" target="_self">youtube</a>
+    </nav>
+   <br>
+      <a href="http://instagram.com">insta</a>
+    
+</body>
+</html>

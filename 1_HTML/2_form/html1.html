@@ -1,0 +1,75 @@
+<!--
+-> label and input tags :  
+   
+->  types of input tags 
+-> hidden type in input : need to send some data but should not be displayed then use hidden 
+->important attributes for input tag : required , id , name , value 
+-> max min attri in input tag : can be given to number or date type 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login page </h2>
+    <form action="http://google.com" method="get" id="rform" >
+        <input type="hidden" id="pascode" value="321">
+        <br>
+     
+        <label for="username" form="rform">User Name</label>
+        <input type="text" id="username" name="username">
+        <br>
+
+        <label for="password" form="rform">pASSWORD</label>
+     <input type="password" id="password" name="password">
+     <br>
+
+     <label for="yearOfExperience" form="rform">yearOfExperience</label>
+     <input type="number" id="yearOfExperience" name="yearOfExperience">
+     <br>
+
+     <label for="dob" form="rform">Dob</label>
+     <input type="date" name="dob" id="dob">
+     <br>
+
+     <label for="adhaar" form="rform">adhaar</label>
+     <input type="file" name="adhaar" id="adhaar">
+     <br>
+
+     <label for="selectColor" form="rform">selectColor</label>
+     <input type="color" name="color" id="selectColor">
+     <br>
+
+     <label for="url1" form="rform">Enter url</label>
+     <input type="url" name="url" id="url1">
+     <br>
+
+     <label for="gender" form="rform">gender</label>
+     <input type="radio" id="gender" name="male">
+     <input type="radio" id="gender" name="female">
+     <br>
+
+     <label for="email" form="rform">Enter email</label>
+     <input type="email" id="email" name="email">
+     <br>
+
+     <label for="range" form="rform">Range input</label>
+     <input type="range" id="range" name="range">
+   <br> 
+      <label for="image" form="rform">select image</label>
+     <input type="image" id="image" name="image" src="../img-1.jpg">
+
+
+
+     
+     <input type="submit" value="submit"></input>
+
+
+    </form>
+    
+</body>
+</html>

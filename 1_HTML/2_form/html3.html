@@ -1,0 +1,71 @@
+<!-- 
+->Different types of tags can be inside form 
+-> textarea 
+->select options optgroup
+->field set 
+-> ouput tag need to study ************
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="submit" id="rform" cols="50" rows="50">
+        
+        <textarea name="text1" id="text1" placeholder="this is the text area" >
+
+        </textarea>
+        <!-- read only text area tag  -->
+        <textarea name="text2" id="text2" readonly>
+            THIS IS THE READONLY TEXT AREA 
+        </textarea>
+         <br><br>
+         <label for="">not multiple</label>
+        <select name="cars" id="cars" required  >
+            <!-- selected , label , disabled  -->
+            <option value="volvo">volvo</option>
+            <option value="audi" selected >audi</option>
+            <option value="benz">benz</option>
+        </select>
+
+        <label for="">multiple</label>
+        <select name="cars" id="cars" multiple >
+            <option value="volvo">volvo</option>
+            <option value="audi">audi</option>
+            <option value="benz">benz</option>
+        </select>
+        <br><br>
+        <!-- opt group  -->
+         <label for="cars">Optgroup</label>
+         <select name="cars" id="cars2"  >
+          <optgroup label="german cars" >German crs
+              <option value="volvo">volvo</option>
+              <option value="audi">audi</option>
+            </optgroup>
+          <optgroup label="french cars">french crs   
+              <option value="benz" selected>benz</option>
+            </optgroup>
+        </select>
+
+        <!-- field set  -->
+         <fieldset name="fieldset1"  form="rform">
+
+             <input type="text" id="username" name="username" placeholder="enter user name">
+             <input type="password" id="passkey" name="passkey" placeholder="enter your password">
+            </fieldset>
+
+            <!-- Output :  -->
+
+            <input type="number" value="1"> + <input type="number" value="2"> = <output ></output>
+    </form>
+    
+
+   
+</body>
+</html>

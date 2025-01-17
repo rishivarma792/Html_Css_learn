@@ -1,0 +1,54 @@
+<!-- 
+-> BOX MODEL : 
+ -> box-sizing : (def: content box)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+      main{
+        margin : 10 px ; 
+        border: 2px solid blue;
+      }
+
+      .main{
+        
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        border: 10px solid red;
+        padding: 10px;
+        margin : 10px ; 
+        /* if kept like this the content size : border-box will become 
+         widht : 500 px 
+         bor : 10px , padding : 10px 
+         for 10px border is taken 9.6 and 0.4 is outside the border and padding and content widht so no need to include 
+         so , 
+         padding : 10px*2 , border : 9.6 *2 , = 39.2 it is the value of which content is decreased : 500-39.2 = 460.8 
+        */
+        box-sizing: border-box;  
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+     
+    <main>
+
+        <section  class="main">
+              
+        </section>
+        
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
