@@ -1,0 +1,89 @@
+<!-- 
+-> Child Combinator(>) : only select the direct children of
+ the selected parent not the futher more downward heirarchy
+ ->
+ 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHild Combinator </title>
+</head>
+<style>
+ 
+ /* if i want to apply color to para1 and para 2 and not to para 3 i will use child C */
+ .art-1 > p {
+   color: red;
+ }
+ /* if i want to apply color red to all the para inside article 1 para1 and para 2 , para 3 i use decendent c  */
+.art-1 p{
+    color: blue;
+} 
+
+/* C-2 using first child 
+->if i only want para-1 to color red then i use :first-child 
+->if i want to select nth child 
+->using nth child the property wll be applied to every element in this n child irresepective of downward heirarchy 
+*/
+
+.sec-2 > :first-child {
+    color: red;
+}
+
+.sec-2 > :nth-child(2){
+    color: brown;
+}
+
+/* C-3 */
+
+.sec-3{
+    color: blueviolet;
+}
+
+
+</style>
+<body>
+
+<!-- concept 1 :  -->
+    <main>
+    
+        <section class="sec-1">
+     <article class="art-1">
+        <p class="para-1">this is para 1</p>
+        <p class="par-2">this is para 2</p>
+        <div>
+            <p class="par-3inside">
+            This is para-3 inside div 
+            </p>
+        </div>
+     </article>
+    </main>
+
+    <!-- concept 2 -->
+
+    <sectio class="sec-2">
+        <p class="para-1">this is para 1</p>
+        <div class="child-2">
+
+            <p class="par-2">this is para 1 inisde 2nd child of sec-2 </p>
+            <p>this is para-2 inside 2nd child of sec-2</p>
+        </div>
+       
+    </section>
+
+    <!-- concept 3 
+    -> 
+    -->
+    <section class="sec-3">
+        <p>this is direct child of sec-3</p>
+        <div>
+            <p>If style applied to top most parent will it apply to this </p>
+        </div>
+    </section>
+    
+</body>
+</html>

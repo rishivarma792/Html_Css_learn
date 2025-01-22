@@ -1,0 +1,61 @@
+<!-- 
+->SUbsequent sibiling operator : 
+-> + only select one sibiling element specified but ~ selects all the sibilings  
+->C2 : it only select the next sibilings dont select the next sibiling child 
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsequent sibiling operator </title>
+    </head>
+<style>
+
+/* c-1 : 
+*/
+.div-1 ~ p{
+background-color: aqua;
+}
+
+/* c-2 */
+.div-2 ~ p {
+    background-color: brown;
+}
+</style>
+
+
+<body>
+    <!-- c-1 -->
+ <main>
+ <section>
+    <div class="div-1">
+        <p>THis is para -1 </p>
+    </div>
+    <p>THis is para-2</p>
+    <p>THis is para-3</p>
+ </section>
+ </main>
+
+<!-- c-2 :
+->will it work for child sibilings  
+-->
+ <section>
+   <div class="div-2">
+    <p>inside div</p>
+   </div>
+ <p>simple para</p>
+   <div class="sibi-1">
+ <p class="child-sibi-1">this is inside the sibiling-1 child-1</p>
+ <p class="child-2-sibi-1">this is child 2 of sibiling 1</p>
+   </div>
+
+ </section>
+
+</body>
+</html>

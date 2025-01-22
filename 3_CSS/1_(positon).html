@@ -1,0 +1,102 @@
+<!-- 
+ -> POSTION : 
+  -> STATIC :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sec-1{
+           
+        }
+        .art-1{
+            
+        }
+        .art-2{
+            position: relative;
+            top: 10px;
+
+        }
+        .art-2 div p{
+            position: absolute;
+            top: 100px; 
+            left: 100px;
+            background-color: aqua;
+        }
+        .art-2 div{
+         position: inherit;
+        }
+        /* c-2 :  */
+        .sec-2 {
+            position: absolute;
+            top: 0px;
+            background-color: blue;
+            color: white;
+        }
+        /* c-3 :  */
+        .sec-3 {
+            width: 100px;
+            height: 500px;
+            background-color: aqua;
+        position: fixed;
+        top: 0px;
+        left: 80%;
+        }
+        .sec-3 div::first-line {
+        color: brown;
+        }
+    </style>
+</head>
+<body>
+     
+    <!-- C- 1 
+    ->when keot p absolute then p relative to its parent which is relative top and left are adding  
+    -->
+
+    <section class="sec-1">
+     <article class="art-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio, id ratione, reprehenderit ipsam nam doloribus cumque libero repellat, voluptas numquam asperiores eveniet quam fuga culpa accusamus. Aliquid, enim esse.</p>
+        <a href="/">THis is anchor tag</a>
+     </article>
+     <article class="art-2">
+         <div>this is div
+         <p>ABSOLUTE CONTENT RELATIVE TO PARENT DIV UNDER ARTICLE 2 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quas asperiores, numquam suscipit perspiciatis eveniet nostrum deserunt est in et veritatis sint ipsam nobis ducimus unde saepe possimus, doloribus dolore.</p>
+     </div>   
+     </article>
+     <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio architecto soluta, unde facere numquam non ex ab quidem quos, cupiditate, expedita aut? Id nobis ipsam, molestiae accusamus qui minus voluptate.</p>
+     </div>
+     <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio architecto soluta, unde facere numquam non ex ab quidem quos, cupiditate, expedita aut? Id nobis ipsam, molestiae accusamus qui minus voluptate.</p>
+     </div>
+     <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio architecto soluta, unde facere numquam non ex ab quidem quos, cupiditate, expedita aut? Id nobis ipsam, molestiae accusamus qui minus voluptate.</p>
+     </div>
+     <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio architecto soluta, unde facere numquam non ex ab quidem quos, cupiditate, expedita aut? Id nobis ipsam, molestiae accusamus qui minus voluptate.</p>
+     </div>
+    </section>
+
+    <!-- C-2 : 
+    ->WHEN THER IS NO PARENT TO ABOSOLUTE WHAT HAPPEN : then it takes   
+    -->
+
+    <SECTION class="sec-2">
+        <p>this is aboslute with no relative parent :</p>
+    </SECTION>
+
+    <!-- C-3 : fixed -->
+     <section class="sec-3">
+        <div>
+            <p>THIS IS FIXED CONTENT <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nulla fuga, provident eos, quas consequatur doloribus beatae laborum dicta porro debitis dolorum labore tempore maiores non praesentium officia id exercitationem.</p>
+        </div>
+     </section>
+
+
+
+</body>
+</html>

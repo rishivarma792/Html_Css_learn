@@ -1,0 +1,49 @@
+<!-- 
+ ->FLOAT : 
+   ->MAKES OUT OF FLOW BUT STILL INLINE ELEMENTS LIKE TEXT AND inline block  WILL WRAP AROUND 
+   ->thangs can overlap float 
+
+ ->Clear : 
+ -> this makes the element not flow according to float   
+ 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <style>
+    .div-1 {
+        width: 600px;
+        height: 500px ;
+    }
+    .div-1 img {
+        /* here irrespective of div the image is getting out of div as it is out of flow  */
+        float: inline-end;
+        max-width: 100%;    
+        height: 50%;
+
+    }
+    .art-1{
+        height: 250px;
+        width: 250px;
+        background-color: aquamarine;
+        
+        
+    }
+ </style>
+ <body>
+    
+    <!-- c-1 float property  -->
+
+    <div class="div-1">
+        <img src="./man-image.jpg" alt="this is image">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi minus quos repellendus deleniti facere fugit deserunt veniam vero eveniet explicabo sint exercitationem voluptates enim, in nam eaque repudiandae dolores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sit neque odit provident nostrum ut porro consequatur corporis vel pariatur. Eos ut sunt dolore vero facere error fugiat sit earum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti nostrum, modi minus ut quaerat aliquam distinctio quasi. In iure voluptas dolorem culpa odit mollitia repellendus, quasi dolore minima sit ab.</p>
+         <!--if it sis article then the float image is overlapping the article as article is block  -->
+        <!-- <article class="art-1"></article> -->
+    </div>
+ </body>
+ </html>

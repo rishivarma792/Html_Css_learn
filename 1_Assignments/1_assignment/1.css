@@ -1,118 +1,200 @@
-
-p{
-    margin: 0px;
-    padding: 0px;
-}
-
-
-main{
+body,:root{
+    
+    font-family: sans-serif;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    height: 300px;
-    justify-content: space-evenly;
-}
-
-.right{
-    /* display: flex; */
-}
-.right > *{
-    display: inline;
-}
-
-.right-main{
- 
-    font-size: 15px ; 
-    padding : 2px ;
-    text-decoration: underline;
-    color: cadetblue    ;
-
-}
-
-.right-hide{
-    /* display: inline-flex;
-    justify-content: center;
-    align-items: center; */
-    display: none;
-
-
-}
-
-.right-main:hover + .right-hide{
-    display: inline-flex; 
     justify-content: center;
     align-items: center;
+    font-size: 14px
+}
+
+[tooltip]{
+    
+    display:  inline-block;
+    font-size: 1.5rem;  
+    margin: 5rem;
+    color : #258ec1 ;
+    text-decoration: underline;
+
+    position: relative;
+    
+
+    
 
 }
-.right-tri{
-    width: 0px;
-    height: 0px;
-    border-right: 4px solid lightslategray;
-    border-top: 4px solid transparent ;
-    border-bottom: 4px solid transparent ; 
-}
-.right-text{
-    background-color: lightslategray;
+
+
+[tooltip]::before{
+
+    content: attr(tooltip);
+    position:absolute;
+    background-color: #555555;
     color: white;
-    padding: 3px;
-    border-radius: 3px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left{
-    display: flex;
-}
-.left > *{
-    display: inline;
-}
-
-.left-main{
- 
-    font-size: 15px ; 
-    padding : 2px ;
-    text-decoration: underline;
-    color: cadetblue    ;
-
-}
-
-.left-hide{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    /* display: none; */
-}
-/* 
-.left-hide+.left-main:hover  {
-    display: inline-flex; 
-    justify-content: center;
-    align-items: center;
-
-} */
-
- /* .left-hide:has(+ .left-main:hover)    {
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center; 
+    visibility: hidden;
+    opacity: 0;   
+    white-space: nowrap;
+    
+    /* bydefualt top */
+    /* left: 50%;
+    bottom: calc(100% + 0.59rem);
+    transform: translate(-50% , 0px); */
+    
+    
+    overflow-x: auto;
+    overflow-y:auto;
+    width: 10rem;
+    min-width: 10rem;
+    min-height:fit-content;
+   max-height: 3rem;
+   max-width: 30rem;
+   /* transition: traslate(-50%,-50%); */
+/*  */
+    
    
-    display: inline-flex;
-    justify-content: center;    
-    align-items: center;
-} */
-.left-tri{
-    width: 0px;
-    height: 0px;
-    border-left: 4px solid lightslategray;
-    border-top: 4px solid transparent ;
-    border-bottom: 4px solid transparent ; 
+   
+   
 }
-.left-text{
-    background-color: lightslategray;
-    color: white;
-    padding: 3px;
-    border-radius: 3px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: centre ; 
-}
+[tooltip]::after {
+            content:"" ; /* Add a small arrow or any other content */
+            position: absolute;
+            font-size: 1.5rem;
+            color: #555555;
+            max-height: 100%; 
+
+            /* to show or not   */
+            /* visibility: hidden;
+             opacity: 0; */
+
+
+            transition: opacity 0.3s;
+            
+            
+            /* for top */
+            /* bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-right: 0.5rem solid transparent ;
+            border-left: 0.5rem solid transparent ;
+            border-top:  0.5rem solid #555555 ;  */
+
+            visibility: hidden;
+            opacity: 0;
+            
+            
+            
+        }
+
+        [tooltip-position="top"]::before{
+    /* for text */
+    left: 50%;
+    bottom: calc(100% + 0.5rem);
+    transform: translate(-50% , 0px);
+/* 
+    visibility: hidden;
+             opacity: 0; */
+    
+
+  }   
+  
+  [tooltip-position="top"]::after{
+    /* for arrow */
+    bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-right: 0.5rem solid transparent ;
+            border-left: 0.5rem solid transparent ;
+            border-top:  0.5rem solid #555555 ; 
+
+    /* visibility: hidden;
+             opacity: 0; */
+  } 
+
+  [tooltip-position="right"]::before{
+    /* for text */
+    transform: translate(0px , -50%);
+    left: calc(100% + 0.5rem);
+    z-index: 2;
+    top: 50%;
+    visibility: hidden;
+             opacity: 0;
+  }   
+  
+  [tooltip-position="right"]::after{
+    /* for arrow */
+    border-bottom: 0.5rem solid transparent;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #555555;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+
+    visibility: hidden;
+             opacity: 0;
+  }      
+
+  [tooltip-position="bottom"]::before{
+    /* for text */
+    transform: translate(-50%,0px);
+    top: calc(100% + 0.59em);
+    z-index: 2;
+    left: 50%;
+  }   
+  
+  [tooltip-position="bottom"]::after{
+    /* for arrow */
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid #555555;
+    border-top: 0.5rem solid transparent;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }      
+
+  /* left */
+  [tooltip-position="left"]::before{
+   right: calc(100% + 0.5rem);
+   top: 50%;
+   transform: translateY(-50%);    
+  }   
+  
+  [tooltip-position="left"]::after{
+    
+     border-left: 0.5rem solid #555555;
+    /* border-right: 0.5rem solid transparent; */
+    border-bottom: 0.5rem solid transparent;
+    border-top: 0.5rem solid transparent;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+  }    
+
+  [tooltip]:hover:before{
+    visibility: visible;
+             opacity: 1;
+  }
+  [tooltip]:hover:after{
+    visibility: visible;
+             opacity: 1;
+  }
+
+
+
+  [tooltip]:not([tooltip-position])::before{
+    left: 50%;
+    bottom: calc(100% + 0.5rem);
+    transform: translate(-50% , 0px);
+  }
+  [tooltip]:not([tooltip-position])::after{
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-right: 0.5rem solid transparent ;
+    border-left: 0.5rem solid transparent ;
+    border-top:  0.5rem solid #555555 ; 
+  }

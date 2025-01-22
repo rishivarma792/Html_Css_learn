@@ -1,0 +1,77 @@
+<!-- 
+->Combinators : 
+ -> decendent combinators :  
+ -> in this combinator the style is applied to all those inside 1st selector and and has 2nd selector even it 
+    applies to those element which are not direct children 
+  -> IMPORTANT : The way CSS actually applies styles is that it looks at each element,
+   then goes through the stylesheets from top to bottom, decides if it matches, and 
+   then applies/overrides styles as it goes. That’s just one aspect of the cascade, 
+   among others (such as inheritance and specificity). Since in your second example #red
+    span comes last in the CSS source, it gets applied last, overriding #green span, 
+    regardless of “how close” the span is within the #red in the DOM.  
+   ->it is beeter to target the a element directly with its class or id rather than combinators  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #green span {
+        color: green;
+    }
+
+    #red span {
+        color: red;
+    }
+
+    .color span {
+        color: brown;
+    }
+
+    main article a {
+        background-color: blue;
+    }
+</style>
+
+<body>
+   <!-- concept 1 :  -->
+    <div id="red" class="color">
+        <p><span>Red</span>hi this is rishi </p>
+        <div id="green">
+            <p><span>Green</span></p>
+
+        </div>
+    </div>
+
+    <main>
+      
+        <section class="sec-1">
+          <a href="">this is anchor </a>
+          <article>
+            <a href="">this is anchor inside article </a>
+            <article>
+                <div>
+                    <p>
+                        <span>
+                            <a href="">this is anchor very inside of the article tag</a>
+                        </span>
+                    </p>
+                </div>
+            </article>
+          </article>
+         </section>
+
+         <section class="sec-2">
+        
+        </section>
+
+    </main>
+
+</body>
+
+</html>

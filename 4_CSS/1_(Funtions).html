@@ -1,0 +1,65 @@
+<!-- 
+->FUNCTIONS : 
+->  url
+-> cal
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* c-1 */
+        .sec-1{
+         background-image: url("https://th.bing.com/th/id/OIP.Nux3bkgr60uonS2Gfay7_gHaE8?rs=1&pid=ImgDetMain"); 
+         height: 500px;
+         /* width: 500px; */
+         width: calc(1000px - 500px);
+         text-align: center;
+         background-position: center;
+         background-repeat: repeat;
+         filter: blur(3px);
+        }
+
+        /* c-2 : opacity , brightness , nth-child nth last-child */
+        .sec-2 img{
+            filter: opacity(10%);
+        }
+        .sec-2 ul li:nth-child(2){
+            background-color: aqua;
+        }
+
+       
+
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- C 1 : URL() ,cal() , blur()-in filter , -->
+     <h1>this is blur effect</h1>
+     <section class="sec-1">
+        <h1>this is the use of url</h1>
+
+     </section>
+     <hr>
+     <!--  -->
+
+     <!-- c-2 : opacity()  -->
+      <section class="sec-2">
+        <img src="./man-image.jpg" alt="" height="200px" width="200px">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+
+        </ul>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!-- 
+->Next sibiling combinator :
+-> Used to select sibilings that are directly afterwards  which are under same parent 
+
+C-1 : 
+->using next sib we can only select the immediate sibiling 
+
+C-2 : Combination of selector 
+->combining decendent and next sibiling 
+->here .a .b select all (.b,.b,.b,.b-4 paras) and then 
+-> + .b starting form first .b -> (.b + .b) here the second para style is added 
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+a + .para-2 {
+    color: red;
+}
+
+a + p{
+ color: blue;
+}
+
+/* c-2 */
+
+/* this also goes to inner child  */
+.a .b + .b {
+    background-color: brown;
+}
+/* this does not go to inner children */
+.a > .b + .b{
+    background-color: bisque;
+}
+
+/* .b + .b {
+    background-color: aqua;
+} */
+</style>
+<body>
+  <!-- C-1 :  -->
+    <main>
+  <section class="sec-1">
+     <a href="/">this is anchor tag</a>
+     <p class="para-1">para 1 </p>
+     <p class="para-2">para-2</p>
+     <div>
+        <a href="">anchor-2</a>
+        <p class="para-3">this is para 3</p>
+     </div>
+  </section>
+    </main>
+
+    <br><hr>
+    <!-- C2 :  -->
+     <section class="sec-2">
+        <div class="a">
+            <p class="b">this is para-1</p>
+            <p class="b">this is para-2</p>
+            <p class="b">this is para-3</p>
+            <p class="b">this is para-4</p>
+            <div>
+                <p class="b">This is para-5 inside div</p>
+                <p class="b">This is para-5 inside div</p>
+
+            </div>
+
+        </div>
+     </section>
+    
+</body>
+</html>

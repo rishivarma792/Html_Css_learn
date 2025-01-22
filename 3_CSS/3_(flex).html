@@ -1,0 +1,65 @@
+<!-- 
+->FLEX : 
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLex</title>
+    <style>
+        .div-1{
+            display: inline-flex;
+            width: 500px;
+            height: 500px;   
+            flex-wrap: wrap;
+            border: 1px solid blue;
+            flex-shrink: 1; 
+        }
+        .div-1 div {
+        min-height: 100px;
+        min-width: 100px;
+        background-color: aqua;
+        text-align: center; 
+        border: 1px solid red;  
+        }
+        .f-1{
+        flex: 1 1 40% ; 
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- c-1 -->
+     <section class="sec-1">
+        <div class="div-1">
+          <div class="f-1">
+             1
+          </div>
+          <div  class="f-1">
+            1
+         </div>
+         <div class="f-1">
+            1
+         </div>
+         <div class="f-1">
+            1
+         </div>
+         <div class="f-1">
+            1
+         </div>
+         <div class="f-1">
+            1
+         </div>
+         <div class="f-1">
+            1
+         </div>
+        </div>
+       <span>hi</span>
+     </section>
+</body>
+</html>
