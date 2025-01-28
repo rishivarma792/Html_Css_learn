@@ -1,3 +1,10 @@
+<!-- 
+-> kepping postion relative to the hero-display worked no need to kepp height 
+  in relative position we can adjust from the where the content must be actually placed 
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,85 +16,93 @@
 </head>
 
 <body>
+    <header>
+
 
     <main>
-        <section class="hero-section">
+        <div class="hero">
+            <section class="hero-section">
 
-            <h2 class="hero-heading">
-                BelajarYuk.
-            </h2>
-            <p class="hero-description">Lets Learn Something new Today</p>
-            <div class="hero-display">
-                <div class="display-circle">
+                <p class="hero-heading">
+                    BelajarYuk.
+                </p>
+                <p class="hero-description">Let's Learn Something new Today</p>
+                <div class="hero-display">
+
+                        <div class="display-circle">
+                            <img src="./assets/Mobile 1.png" alt="mobile-1" class="display-mobile-1">
+                            <img src="./assets/Mobile 2.png" alt="mobile-2" class="display-mobile-2">
+                        </div>
                 </div>
-                <img src="./assets/Mobile 1.png" alt="mobile-1" class="display-mobile-1">
-                <img src="./assets/Mobile 2.png" alt="mobile-2" class="display-mobile-2">
-
-            </div>
-            <div class="hero-links">
-                <div class="google-play-link">
-                    <img src="./assets/google-play-badge.png" alt="google-play">
-                </div>
-                <div class="apple-store-link">
-                    <img src="./assets/app-store-png-logo-33116.png" alt="apple-store">
-                </div>
-            </div>
-
-        </section>
-        <section class="login-section">
-
-            <h2 class="login-heading">Log In to BelajarYuk</h2>
-            <p class="login-description">Welcome back! login with your data that you entered during registration</p>
-
-            <div class="login-navigation">
-                <div class="google-login">
-                    <img src="./assets/icons8-google-50.png" alt="google-icon">
-                    <span>Login With Google</span>
-                </div>
-                <div class="facebook-login">
-                    <img src="./assets/facebook.png" alt="facebook-icon">
-                    <span>Login With facebook</span>
-                </div>
-            </div>
-
-            <div class="login-line">
-                <hr>
-                <span>or</span>
-                <hr>
-            </div>
-            <form action="submit" class="login-form" id="login-form">
-
-                <div class="login-label">
-                    <img src="./assets/mail.png" alt="mail-icon" class="login-label-image email-image">
-                    <div class="login-content">
-                        <label for="email" form="login-form">
-                            Email
-                        </label>
-                        <input type="email" name="Email" id="email">
+                <div class="hero-links">
+                    <div class="google-play-link">
+                        <img src="./assets/google-play-badge.png" alt="google-play">
+                    </div>
+                    <div class="apple-store-link">
+                        <img src="./assets/app-store-png-logo-33116.png" alt="apple-store">
                     </div>
                 </div>
+            </section>
 
+        </div>
+        <div class="login">
+
+            <section class="login-section">
+                
+                <p class="login-heading">Log In to BelajarYuk</p>
+                <p class="login-description">Welcome back! login with your data that you entered during registration</p>
+                
+                <div class="login-navigation">
+                    <div class="login-direct google-login">
+                        <img src="./assets/icons8-google-50.png" alt="google-icon">
+                        <span>Login With Google</span>
+                    </div>
+                    <div class="login-direct facebook-login">
+                        <img src="./assets/facebook.png" alt="facebook-icon">
+                        <span>Login With facebook</span>
+                    </div>
+                </div>
+                
+                <div class="login-line">
+                    or
+                </div>
+                <form action="submit" class="login-form" id="login-form">
+                    
+                    <div class="login-label">
+                        <img src="./assets/mail.png" alt="mail-icon" class="login-label-image email-image">
+                        <div class="login-content">
+                            <label for="email" form="login-form">
+                                Email
+                            </label>
+                        <input type="email" name="Email" id="email" value="Rishi.Alluri@paltech.com">
+                    </div>
+                </div>
+                
                 <div class="login-label">
                     <img src="./assets/padlock.png" alt="password" class="login-label-image password-image">
                     <div class="login-content">
-
-                        <label for="password" form="login-form"  >Password</label>
-
-                        <input type="password" name="Password" id="password">
+                        
+                        <label for="password" form="login-form" >Password</label>
+                        
+                        <input type="password" name="Password" id="password" value="rishialluri">
                     </div>
                 </div>
-
                 
-                    <div class="login-remember-content">
-                        <input type="checkbox" id="remember-me" name="remember-me">
-                        <p>Remember me</p>
+                 <div class="login-other-content">
+
+                     <div class="login-remember-content">
+                         <input type="checkbox" id="checkbox"> 
+                         <label for="remember-me" form="login-form">
+                            Remember me
+                        </label>
+                        </div>
+                        <a href="" class="login-forgot-password">Forget Your Password</a>
                     </div>
-                    <a href="" class="login-forgot-password">Forget Your Password</a>
-
-            
-
-                <button class="login-button">Login</button>
-
+                
+                
+                
+                <button class="login-button">LOGIN</button>
+                
                 <div class="login-signup">
                     <span>Don't have an account?</span>
                     <a href="">Register</a>
@@ -95,8 +110,10 @@
 
             </form>
         </section>
+    </div>
     </main>
-
+</header>
+    
 </body>
 
 </html>

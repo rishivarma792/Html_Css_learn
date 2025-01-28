@@ -18,6 +18,7 @@ body,:root{
     text-decoration: underline;
 
     position: relative;
+    max-width: 20rem;
     
 
     
@@ -36,7 +37,7 @@ body,:root{
     padding: 0.5rem 1rem;
     text-align: center; 
     visibility: hidden;
-    opacity: 0;   
+    /* opacity: 0;    */
     white-space: nowrap;
     
     /* bydefualt top */

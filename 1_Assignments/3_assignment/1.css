@@ -1,0 +1,190 @@
+:root {
+    --theme-color: white;
+    --color-grey: #bfbfbf;
+    --dark-grey: #f3f2f9;
+    --icon-color: white;
+    --theme-color-opposite: black;
+    --social-icons: #bfbfbf;
+    --background-color: #f3f2f9;
+    --desciption-color: #bfbfbf;
+}
+/* font family */
+@font-face {
+    font-family: 'font-1';
+    src: url('./fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'font-2';
+    src: url('./fonts/Playball/Playball-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+/* using mobile first approach */
+html {
+    font-size: 12px;
+}
+/* standard colors */
+.card.pinterest {
+    --card-standard-color: #E60023;
+}
+.card.facebook {
+    --card-standard-color: #4267B2;
+}
+.card.instagram {
+    --card-standard-color: #E1306C;
+}
+.card.behance {
+    --card-standard-color: #1769ff;
+}
+.card.dribble {
+    --card-standard-color: #ea4c89;
+}
+.card.twitter {
+    --card-standard-color: #1DA1F2;
+}
+.card.blogger {
+    --card-standard-color: #fc4f08;
+}
+.card.linkedin {
+    --card-standard-color: #0077b5;
+}
+p,
+h1,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 2rem 10%;
+}
+
+.card {
+    border-radius: 6px;
+    width: 18em;
+    height: 26em;
+    margin: 0rem 1rem;
+    background-color: var(--theme-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card-header {
+    height: 25%;
+    background-color: var(--card-standard-color);
+    padding: 0px 0.5rem;
+    padding-top: 0.5rem;
+}
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: var(--icon-color);
+}
+
+.checkbox-icon {
+    color: var(--icon-color);
+}
+.fa-square-check {
+    display: none;
+}
+.profile-photo {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    border: 5px solid white;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-52%, -15%);
+    top: 50%;
+    box-shadow: var(--card-standard-color) 0px 0px 6px 1px;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    padding: 0px 0.5rem;
+    padding-top: 0.5rem;
+    color: var(--desciption-color);
+    gap: 10%;
+}
+.person-name {
+    margin-top: 20%;
+    font-family: 'font-2';
+    color: var(--theme-color-opposite);
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.person-description {
+    text-align: center;
+    font-family: 'font-1';
+    overflow: auto;
+    min-height: 25%;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    scrollbar-width: none;
+}
+.social-icons {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    margin-bottom: 15%;
+    color: var(--social-icons);
+    font-size: 1rem;
+    gap: 30%;
+    justify-content: center;
+}
+
+input[type="checkbox"]:checked~.card-header {
+    background-color: var(--theme-color);
+    & .card-top,
+    .checkbox-icon {
+        color: var(--card-standard-color);
+    }
+    & .fa-square {
+        display: none;
+    }
+    & .fa-square-check {
+        display: inline;
+    }
+}
+
+input[type="checkbox"]:checked~.card-body {
+    background-color: var(--card-standard-color);
+    color: var(--theme-color);
+
+    & .person-description,
+    .social-icons,
+    .person-name {
+        color: var(--theme-color);
+    }
+}
+
+@media screen and (min-width:1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* for changing theme */
+
+.theme-change{
+    position: fixed;
+    height: 2rem;
+    width: 2rem;
+}
+.theme-change:checked~main {
+    --theme-color: black;
+    --theme-color-opposite: white;
+    --background-color: #545456;
+}
